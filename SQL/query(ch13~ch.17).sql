@@ -34,7 +34,7 @@ where c.reference = p.name and (c.죄종 = '폭력' and c.발생검거='검거')
 
 --1번. 살인의 평균 발생건수를 검색하고 확인하세요
 select avg(c.건수)
-from crime_status c , police_station p
+from crime_status c , police_station p ;;
 where c.reference = p.name and (c.발생검거 = '발생' and c.죄종='살인');
 
 --2번. 서초경찰서의 볌죄 별 평균 검거 건수를 검색하고 확인하세요
