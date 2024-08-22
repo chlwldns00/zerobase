@@ -44,3 +44,16 @@ where c.reference = p.name and (p.name='서울서초경찰서' and c.발생검�
 group by c.죄종
 
 --3번 
+select avg(건수)
+from crime_status 
+where (reference = '서울구로경찰서' or reference ='서울도봉경찰서') and (죄종='살인' and 발생검거='검거');
+--4번
+select min(건수), 죄종
+from crime_status
+where reference='서울광진경찰서' and 발생검거='검거';
+group by 죄종;
+--5번
+select min(건수), 죄종
+from crime_status
+where reference='서울성북경찰서' and 발생검거='발생';
+group by 죄종;
